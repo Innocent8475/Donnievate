@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donnievate</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">
+      <img src="assets/img/logo.jpeg" alt="Donnievate Logo">
+      <span class="brand-name">Donnievate</span>
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-links">
+      <a href="#why"><i class="ri-shield-check-line"></i> Why Choose</a>
+      <a href="#featured"><i class="ri-macbook-line"></i> Laptops</a>
+      <a href="#guides"><i class="ri-book-open-line"></i> Guides</a>
+      <a href="#testimonials"><i class="ri-chat-quote-line"></i> Testimonials</a>
+      <a href="#support"><i class="ri-customer-service-2-line"></i> Support</a>
+      <a href="#cta"><i class="ri-rocket-line"></i> Get Started</a>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="#cta" class="header-btn"><i class="ri-shopping-cart-line"></i> Shop</a>
+
+    <!-- Mobile Right Side -->
+    <div class="mobile-right">
+      <a href="#cta" class="header-btn mobile-shop"><i class="ri-shopping-cart-line"></i></a>
+      <button class="menu-toggle" aria-label="Menu">
+        <i class="ri-menu-3-line"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown -->
+  <nav class="mobile-nav">
+    <a href="#why"><i class="ri-shield-check-line"></i> Why Choose</a>
+    <a href="#featured"><i class="ri-macbook-line"></i> Laptops</a>
+    <a href="#guides"><i class="ri-book-open-line"></i> Guides</a>
+    <a href="#testimonials"><i class="ri-chat-quote-line"></i> Testimonials</a>
+    <a href="#support"><i class="ri-customer-service-2-line"></i> Support</a>
+    <a href="#cta"><i class="ri-rocket-line"></i> Get Started</a>
+  </nav>
+
+  <!-- Placeholder -->
+  <main>
+    <section id="hero">
+      <h1>Reliable Laptops. Honest Guidance. Lasting Support.</h1>
+      <p>At Donnievate, we believe technology should move you forward.</p>
+    </section>
+  </main>
+
+  <script>
+    // Mobile nav toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const menuIcon = menuToggle.querySelector('i');
+
+    menuToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      if (mobileNav.classList.contains('active')) {
+        menuIcon.classList.replace('ri-menu-3-line', 'ri-close-line');
+      } else {
+        menuIcon.classList.replace('ri-close-line', 'ri-menu-3-line');
+      }
+    });
+
+    // Active nav underline
+    const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
