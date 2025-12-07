@@ -1,5 +1,7 @@
 # Donnievate
 
+![Donnievate Preview](assets/img/preview.png)
+
 A volunteer project for a laptop sales and tech support business. This website provides customers with a platform to browse laptops, access tech guides, and get expert support.
 
 ## 🎯 Project Overview
@@ -43,6 +45,7 @@ donnievate/
 └── assets/
     └── img/
         ├── logo.jpeg      # Brand logo
+        ├── preview.png    # Site preview/screenshot
         ├── guide1.jpg     # Guide thumbnails
         ├── guide2.jpg
         └── guide3.jpg
@@ -141,31 +144,7 @@ To add a new laptop card, copy this template in the "Featured Laptops" section:
 </div>
 ```
 
-## 📸 Image Assets
 
-Replace placeholder images in `assets/img/`:
-- **logo.jpeg** – Brand logo (recommended: 200×200px)
-- **guide1.jpg, guide2.jpg, guide3.jpg** – Guide thumbnails (recommended: 800×600px)
-- **User profile images** – Testimonial avatars (recommended: 150×150px)
-
-## 🌐 Deployment
-
-This project is deployed on **Vercel**. To deploy your own version:
-
-1. Push your code to GitHub
-2. Visit [vercel.com](https://vercel.com)
-3. Import your repository
-4. Vercel will auto-detect the HTML project
-5. Deploy!
-
-Alternatively, you can deploy to:
-- **Netlify** – Drag and drop your folder
-- **GitHub Pages** – Push to a `gh-pages` branch
-- **Firebase Hosting** – Use Firebase CLI
-
-## 🧭 Navigation Structure
-
-```
 Home (index.html)
 ├── Why Choose (#why)
 ├── Featured Laptops (#featured)
